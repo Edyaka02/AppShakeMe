@@ -39,10 +39,28 @@
         self.timerLabel.text = [NSString stringWithFormat:@"%i", timerInt];
         self.scoreLabel.text = [NSString stringWithFormat:@"%i", scoreInt];
         self.imageView.image = [UIImage imageNamed:@"Face1"];
+        [self.startButton setTitle:@"Start Game" forState:UIControlStateNormal];
+        //self.startButton.titleLabel.font = [UIFont fontWithName:@"Futura" size:35.0];
     }
 }
 
--(void)updatetimer{
+-(void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event{
+    if( event.subtype == UIEventSubtypeMotionShake ){
+        if( gameMode == 1 ){
+            scoreInt += 1;
+            self.scoreLabel.text = [NSString stringWithFormat:@"%i", scoreInt];
+            imageInt += 1;
+            
+            if ( imageInt > 12 ) {
+                imageInt = 1;
+            }
+            
+            self.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"Face%i", imageInt]];
+        }
+    }
+}
+
+-(void)updateTimer{
     timerInt -= 1;
     self.timerLabel.text = [NSString stringWithFormat:@"%i", timerInt];
     
