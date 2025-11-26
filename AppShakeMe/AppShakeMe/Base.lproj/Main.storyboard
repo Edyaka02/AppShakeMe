@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="08W-8p-mMM">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Shake Me Silly" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BOz-bf-k8l">
+                                <rect key="frame" x="16" y="20" width="343" height="60"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cyj-cx-54P">
+                                <rect key="frame" x="16" y="88" width="343" height="68"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZPI-VA-ptg">
+                                <rect key="frame" x="16" y="405" width="343" height="68"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Face1" translatesAutoresizingMaskIntoConstraints="NO" id="WGW-kV-MfO">
+                                <rect key="frame" x="16" y="176" width="343" height="203"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nZp-F7-gvx">
+                                <rect key="frame" x="16" y="550" width="343" height="69"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Start Game">
+                                    <fontDescription key="titleFontDescription" name="Futura-Medium" family="Futura" pointSize="35"/>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="startGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y2G-ow-Rmp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nZp-F7-gvx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="6vE-Lq-sHz"/>
+                            <constraint firstItem="WGW-kV-MfO" firstAttribute="top" secondItem="Cyj-cx-54P" secondAttribute="bottom" constant="20" id="Aga-js-Ua7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Cyj-cx-54P" secondAttribute="trailing" constant="16" id="DJR-Z6-vKm"/>
+                            <constraint firstItem="nZp-F7-gvx" firstAttribute="top" secondItem="ZPI-VA-ptg" secondAttribute="bottom" constant="77" id="Dhx-5v-Y4N"/>
+                            <constraint firstItem="08W-8p-mMM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="FnA-3I-gNP"/>
+                            <constraint firstItem="WGW-kV-MfO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Lsd-gQ-3EA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nZp-F7-gvx" secondAttribute="bottom" constant="48" id="OOn-iW-d9B"/>
+                            <constraint firstItem="ZPI-VA-ptg" firstAttribute="top" secondItem="WGW-kV-MfO" secondAttribute="bottom" constant="26" id="RwV-yb-1yu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZPI-VA-ptg" secondAttribute="trailing" constant="16" id="UlQ-SF-6lg"/>
+                            <constraint firstItem="08W-8p-mMM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Ww7-Db-NOx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nZp-F7-gvx" secondAttribute="trailing" constant="16" id="a4V-Pw-I1m"/>
+                            <constraint firstItem="ZPI-VA-ptg" firstAttribute="height" secondItem="Cyj-cx-54P" secondAttribute="height" id="aly-sc-wS3"/>
+                            <constraint firstItem="BOz-bf-k8l" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="bzg-xH-0QZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WGW-kV-MfO" secondAttribute="trailing" constant="16" id="duJ-SB-EDL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BOz-bf-k8l" secondAttribute="trailing" constant="16" id="eQD-Ra-LpM"/>
+                            <constraint firstItem="Cyj-cx-54P" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="l1q-tp-GaE"/>
+                            <constraint firstItem="08W-8p-mMM" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="mkb-rF-ipg"/>
+                            <constraint firstItem="BOz-bf-k8l" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="t8A-3J-VsK"/>
+                            <constraint firstItem="08W-8p-mMM" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="te2-y2-Dzn"/>
+                            <constraint firstItem="ZPI-VA-ptg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="waK-T8-Fie"/>
+                            <constraint firstItem="Cyj-cx-54P" firstAttribute="top" secondItem="BOz-bf-k8l" secondAttribute="bottom" constant="8" symbolic="YES" id="x8n-yi-yCX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="WGW-kV-MfO" id="XF4-8B-Yx1"/>
+                        <outlet property="scoreLabel" destination="ZPI-VA-ptg" id="1LC-0h-Ig8"/>
+                        <outlet property="startButton" destination="nZp-F7-gvx" id="8qY-eN-BHJ"/>
+                        <outlet property="timerLabel" destination="Cyj-cx-54P" id="CV8-nK-CNL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="-27.436281859070466"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Background" width="1920" height="1080"/>
+        <image name="Face1" width="512" height="512"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
